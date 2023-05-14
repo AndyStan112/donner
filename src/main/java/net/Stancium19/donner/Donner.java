@@ -1,6 +1,7 @@
 package net.Stancium19.donner;
 
 import com.mojang.logging.LogUtils;
+import net.Stancium19.donner.block.ModBlocks;
 import net.Stancium19.donner.item.ModCreativeModeTabs;
 import net.Stancium19.donner.item.ModItems;
 import net.minecraft.client.Minecraft;
@@ -38,6 +39,7 @@ public class Donner
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -56,6 +58,8 @@ public class Donner
     {
      if (event.getTab() == ModCreativeModeTabs.DONNER_TAB)
             event.accept(ModItems.SALT);
+            event.accept(ModBlocks.SALT_BLOCK);
+            event.accept(ModBlocks.SALT_ORE);
     }
 
 

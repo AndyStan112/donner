@@ -1,4 +1,6 @@
 {
   "item.donner.salt": "Salt",
+  "block.donner.salt_block": "Block of Salt",
+  "block.donner.salt_ore": "Salt Deposit",
   "creativemodetab.donner_tab": "Donner Tab"
 }
